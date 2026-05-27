@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Sol Customs"
+version = "1.0.0"
+id = "artifacts/sol-customs"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25419
+
+[services.development]
+run = "pnpm --filter @workspace/sol-customs run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sol-customs", "run", "build" ]
+publicDir = "artifacts/sol-customs/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25419"
+BASE_PATH = "/"

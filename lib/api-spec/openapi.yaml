@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: quote
+    description: Quote request operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /quote:
+    post:
+      operationId: submitQuote
+      tags: [quote]
+      summary: Submit a free quote request
+      description: Sends a quote request to the business owner via email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuoteInput"
+      responses:
+        "200":
+          description: Quote request submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuoteResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,58 @@ components:
           type: string
       required:
         - status
-
+    QuoteInput:
+      type: object
+      required:
+        - fullName
+        - email
+        - phone
+        - vehicle
+        - service
+      properties:
+        fullName:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+          minLength: 1
+        vehicle:
+          type: string
+          minLength: 1
+        service:
+          type: string
+          enum:
+            - Vehicle Wrap
+            - Colored PPF
+            - Commercial Wrap
+            - Tail Light Engraving
+            - Glass Engraving
+            - Star Lights
+            - Ambient Lighting
+            - Aero Install
+            - Aftermarket Part Install
+            - Not Sure Yet
+        message:
+          type: ["string", "null"]
+        honeypot:
+          type: ["string", "null"]
+    QuoteResponse:
+      type: object
+      required:
+        - success
+        - message
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string

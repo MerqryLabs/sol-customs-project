@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export type QuoteInputService = typeof QuoteInputService[keyof typeof QuoteInputService];
 
@@ -24,28 +21,3 @@ export const QuoteInputService = {
   Aftermarket_Part_Install: 'Aftermarket Part Install',
   Not_Sure_Yet: 'Not Sure Yet',
 } as const;
-
-export interface QuoteInput {
-  /** @minLength 1 */
-  fullName: string;
-  email: string;
-  /** @minLength 1 */
-  phone: string;
-  /** @minLength 1 */
-  vehicle: string;
-  service: QuoteInputService;
-  /** @nullable */
-  message?: string | null;
-  /** @nullable */
-  honeypot?: string | null;
-}
-
-export interface QuoteResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-}
-
