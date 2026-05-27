@@ -96,6 +96,12 @@ uri = "file://attached_assets/hero_option_d.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "UoJdLQbkdRBOGRclHFltz"
+uri = "file://attached_assets/hero_maroon.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "pAKvOZwB_eUuOS4ODL1we"
 uri = "file://attached_assets/hero_option_a.png"
