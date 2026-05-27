@@ -48,10 +48,7 @@ function Navbar() {
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
-              <div className="flex flex-col leading-none">
-                <span className="text-[22px] font-black tracking-[0.25em] uppercase text-primary drop-shadow-[0_0_8px_rgba(198,161,91,0.5)] group-hover:drop-shadow-[0_0_14px_rgba(198,161,91,0.8)] transition-all duration-300">Sol Customs</span>
-                <span className="text-[9px] tracking-[0.55em] text-foreground/40 uppercase font-light mt-[3px]">Tampa Bay · Est. 2020</span>
-              </div>
+              <span className="text-[22px] font-black tracking-[0.25em] uppercase text-primary drop-shadow-[0_0_8px_rgba(198,161,91,0.5)] group-hover:drop-shadow-[0_0_14px_rgba(198,161,91,0.8)] transition-all duration-300">Sol Customs</span>
             </div>
           </button>
 
