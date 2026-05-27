@@ -51,7 +51,7 @@ function Navbar() {
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
-              <span className="text-[36px] text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] group-hover:drop-shadow-[0_0_14px_rgba(179,30,60,0.9)] transition-all duration-300" style={{ fontFamily: "'Sedgwick Ave Display', cursive" }}>Sol Customs</span>
+              <span className="whitespace-nowrap text-[22px] lg:text-[36px] text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] group-hover:drop-shadow-[0_0_14px_rgba(179,30,60,0.9)] transition-all duration-300" style={{ fontFamily: "'Sedgwick Ave Display', cursive" }}>Sol Customs</span>
             </div>
           </button>
 
