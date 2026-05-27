@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "wouter";
 import { QuoteForm } from "@/components/QuoteForm";
 import heroImg from "@/assets/images/hero.png";
-import gallery1 from "@/assets/images/gallery-1.png";
-import gallery2 from "@/assets/images/gallery-2.png";
-import gallery3 from "@/assets/images/gallery-3.png";
-import gallery4 from "@/assets/images/gallery-4.png";
-import gallery5 from "@/assets/images/gallery-5.png";
-import gallery6 from "@/assets/images/gallery-6.png";
-import gallery7 from "@/assets/images/gallery-7.png";
-import gallery8 from "@/assets/images/gallery-8.png";
-import gallery9 from "@/assets/images/gallery-9.png";
+import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
+import gallery2 from "@assets/703860614_982088887535500_431897983960216145_n_1779909513209.jpg";
+import gallery3 from "@assets/704055660_1668985524407045_7846469435312387687_n_1779909513209.jpg";
+import gallery4 from "@assets/704226449_996381562937453_2606862708781349012_n_1779909513209.jpg";
+import gallery5 from "@assets/704366477_1523950889333741_2747285597907563302_n_1779909513209.jpg";
+import gallery6 from "@assets/705450327_974051568564811_1106820588851195020_n_1779909513209.jpg";
+import gallery7 from "@assets/705967333_973125332195081_1389349046506016320_n_1779909513209.jpg";
+import gallery8 from "@assets/706873775_896180256846272_203189804566728745_n_1779909513209.jpg";
+import gallery9 from "@assets/707397044_27406256158958011_5476898148741391745_n_1779909513209.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -256,15 +256,15 @@ function Services() {
 }
 
 const galleryImages = [
-  { src: gallery1, alt: "Matte black car wrap", label: "Wraps" },
-  { src: gallery2, alt: "Gloss colored PPF detail", label: "PPF" },
-  { src: gallery3, alt: "Custom tail light engraving", label: "Engravings" },
-  { src: gallery4, alt: "Star light headliner interior", label: "Lighting" },
-  { src: gallery5, alt: "Carbon fiber aero kit", label: "Aero" },
-  { src: gallery6, alt: "Ambient interior lighting", label: "Lighting" },
-  { src: gallery7, alt: "Commercial fleet wrap", label: "Commercial" },
-  { src: gallery8, alt: "Glass engraving detail", label: "Engravings" },
-  { src: gallery9, alt: "Satin metallic wrap side", label: "Wraps" },
+  { src: gallery1, alt: "Lexus, Mercedes AMG GT, and Audi TT custom wraps — overhead view", label: "Wraps" },
+  { src: gallery2, alt: "Deep burgundy Lexus IS wrap with blacked-out Mercedes AMG", label: "Wraps" },
+  { src: gallery3, alt: "Genesis G70 color-shift wrap — copper to purple", label: "PPF" },
+  { src: gallery4, alt: "Wrapped Toyotas at sunset — pink, teal, and blue builds", label: "Wraps" },
+  { src: gallery5, alt: "Matte green BMW wrap with amber custom headlight detail", label: "Lighting" },
+  { src: gallery6, alt: "Matte black Mercedes AMG GT with rose gold wheels", label: "Aero" },
+  { src: gallery7, alt: "Custom blue full wrap with detailed engraving pattern", label: "Engravings" },
+  { src: gallery8, alt: "Satin pink Toyota GR86 wrap with wide body aero kit", label: "Wraps" },
+  { src: gallery9, alt: "Sol Customs branded wrap — black and white design", label: "Commercial" },
 ];
 
 function Gallery() {
