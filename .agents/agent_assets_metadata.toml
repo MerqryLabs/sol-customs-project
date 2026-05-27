@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "QWLQurE43AjzCCiwxFZF0"
+uri = "file://artifacts/sol-customs/src/assets/images/hero.png"
+type = "image"
+title = "Dark cinematic luxury car wrap"
+
+[[generated]]
+id = "mZKF9hHX2bSOejsjos4Qr"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-1.png"
+type = "image"
+title = "Matte black car wrap"
+
+[[generated]]
+id = "GP4HaIkVYu7x1LK-KobQm"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-2.png"
+type = "image"
+title = "Gloss colored PPF detail"
+
+[[generated]]
+id = "z7-cQRi_1p2m6S9nFxxSC"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-3.png"
+type = "image"
+title = "Custom tail light engraving"
+
+[[generated]]
+id = "RtsLaCJSlgw3Bbpz0aIjO"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-4.png"
+type = "image"
+title = "Star light headliner interior"
+
+[[generated]]
+id = "BY_avLyZX8DEEM0cJd0s7"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-5.png"
+type = "image"
+title = "Carbon fiber aero kit"
+
+[[generated]]
+id = "VtMsnnBjDCPL230ECT3k3"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-6.png"
+type = "image"
+title = "Ambient interior lighting"
+
+[[generated]]
+id = "szNdjDy1QpwKOcDfN8YZX"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-7.png"
+type = "image"
+title = "Commercial fleet wrap"
+
+[[generated]]
+id = "zCRhEkBhwADAGEjdZyg0f"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-8.png"
+type = "image"
+title = "Glass engraving detail"
+
+[[generated]]
+id = "SVuUOnVFOwFojc39FBcRd"
+uri = "file://artifacts/sol-customs/src/assets/images/gallery-9.png"
+type = "image"
+title = "Satin metallic wrap side"
