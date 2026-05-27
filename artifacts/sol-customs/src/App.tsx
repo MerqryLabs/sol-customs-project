@@ -38,13 +38,13 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 overflow-hidden">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group">
             <img
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ height: "80px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
+              style={{ height: "90px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
             />
             <div className="flex flex-col items-start leading-none gap-[3px]">
               <span className="text-[11px] tracking-[0.5em] text-primary/80 font-light uppercase">Premium Auto</span>
