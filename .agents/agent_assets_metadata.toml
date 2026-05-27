@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "QWLQurE43AjzCCiwxFZF0"
@@ -72,3 +71,51 @@ id = "TTmaHkIoU5cAAD6yR5EoJ"
 uri = "file://attached_assets/detail_generated.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "ppWP5_59l7CObAeIzVDB7"
+uri = "file://attached_assets/hero_option_a.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "QI2FCBP0-4j1fUsdqCzGr"
+uri = "file://attached_assets/hero_option_b.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "8coQQugTIMP15Swv4sh_B"
+uri = "file://attached_assets/hero_option_c.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Hoyk2-8LiDWCJDc6BkYGh"
+uri = "file://attached_assets/hero_option_d.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "pAKvOZwB_eUuOS4ODL1we"
+uri = "file://attached_assets/hero_option_a.png"
+type = "image"
+title = "A — Satin Gold Rooftop at Twilight"
+
+[[outputs]]
+id = "-N3CzWvWjXiZFMmyQUr8A"
+uri = "file://attached_assets/hero_option_b.png"
+type = "image"
+title = "B — Motion on Wet Highway"
+
+[[outputs]]
+id = "D_Ty5OKNvfdVk9dYjRFJV"
+uri = "file://attached_assets/hero_option_c.png"
+type = "image"
+title = "C — Aerial 3-Car Formation"
+
+[[outputs]]
+id = "DNUau4PrSFLQLYoE911P-"
+uri = "file://attached_assets/hero_option_d.png"
+type = "image"
+title = "D — Studio Close-Up Front End"
