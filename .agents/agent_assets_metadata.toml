@@ -60,3 +60,9 @@ id = "SVuUOnVFOwFojc39FBcRd"
 uri = "file://artifacts/sol-customs/src/assets/images/gallery-9.png"
 type = "image"
 title = "Satin metallic wrap side"
+
+[[generated]]
+id = "EaUDXxfS3wQNzc7aUlia8"
+uri = "file://attached_assets/hero_generated.png"
+type = "image"
+title = "generated_image"
