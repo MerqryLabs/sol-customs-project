@@ -14,7 +14,7 @@ import gallery7 from "@assets/705967333_973125332195081_1389349046506016320_n_17
 import gallery8 from "@assets/706873775_896180256846272_203189804566728745_n_1779909513209.jpg";
 import gallery9 from "@assets/707397044_27406256158958011_5476898148741391745_n_1779909513209.jpg";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin, Paintbrush, Shield, Truck, Lightbulb, Gem, Star, Sparkles, Wind, Wrench } from "lucide-react";
+import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin, Paintbrush, Shield, Truck, Lightbulb, Gem, Star, Sparkles, Wind, Wrench, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Navbar() {
@@ -468,7 +468,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-muted-foreground mb-10">
             <div className="flex items-center gap-3 justify-center">
               <Clock className="text-primary" size={20} />
               <span>Everyday, 10:00 AM - 8:00 PM</span>
@@ -478,6 +478,16 @@ function Contact() {
               <span>Serving Ruskin & Tampa Bay</span>
             </div>
           </div>
+
+          <a
+            href="https://www.instagram.com/sol.customs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-6 py-3 border border-primary/40 rounded-full text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 group"
+          >
+            <Instagram size={20} className="group-hover:scale-110 transition-transform" />
+            <span className="font-medium tracking-wide">@sol.customs</span>
+          </a>
         </motion.div>
       </div>
     </section>
@@ -489,7 +499,16 @@ function Footer() {
     <footer className="bg-background py-12 border-t border-border">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-2xl font-bold tracking-[0.3em] text-foreground mb-4">SOL CUSTOMS</h2>
-        <p className="text-primary italic mb-8">Identity on wheels.</p>
+        <p className="text-primary italic mb-6">Identity on wheels.</p>
+        <a
+          href="https://www.instagram.com/sol.customs/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
+        >
+          <Instagram size={18} />
+          <span className="text-sm">@sol.customs</span>
+        </a>
         <p className="text-muted-foreground text-sm">
           &copy; {new Date().getFullYear()} Sol Customs. All rights reserved.
         </p>
