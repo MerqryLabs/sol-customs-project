@@ -22,10 +22,12 @@ function Navbar() {
 
   const scrollTo = (id: string) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 150);
   };
 
   const navLinks = [
@@ -45,11 +47,11 @@ function Navbar() {
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ height: "90px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
+              style={{ height: "90px", filter: "invert(1) sepia(1) saturate(2) hue-rotate(300deg) drop-shadow(0 0 12px rgba(179,30,60,0.8))" }}
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
-              <span className="text-[22px] font-black tracking-[0.25em] uppercase text-primary drop-shadow-[0_0_8px_rgba(198,161,91,0.5)] group-hover:drop-shadow-[0_0_14px_rgba(198,161,91,0.8)] transition-all duration-300">Sol Customs</span>
+              <span className="text-[22px] font-black tracking-[0.25em] uppercase text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] group-hover:drop-shadow-[0_0_14px_rgba(179,30,60,0.9)] transition-all duration-300">Sol Customs</span>
             </div>
           </button>
 
@@ -66,7 +68,7 @@ function Navbar() {
             ))}
             <Button
               onClick={() => scrollTo("quote")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(198,161,91,0.3)] transition-all"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(179,30,60,0.4)] transition-all"
             >
               Free Quote
             </Button>
@@ -153,7 +155,7 @@ function Hero() {
             <Button
               size="lg"
               onClick={() => scrollTo("quote")}
-              className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(198,161,91,0.4)] transition-all"
+              className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(179,30,60,0.5)] transition-all"
             >
               Get a Free Quote
             </Button>

@@ -229,7 +229,7 @@ export function QuoteForm() {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(198,161,91,0.3)] transition-all"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(179,30,60,0.4)] transition-all"
                   disabled={submitQuote.isPending}
                 >
                   {submitQuote.isPending ? (
