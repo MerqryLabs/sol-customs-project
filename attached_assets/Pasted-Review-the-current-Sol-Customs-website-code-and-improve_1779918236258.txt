@@ -1,0 +1,166 @@
+Review the current Sol Customs website code and improve it based on the PRD and previous review. For now, DO NOT build or add the “Get a Free Quote” form, quote automation, backend email sending, or lead capture system. Ignore that feature completely for this update.
+
+Main goal:
+Make the site feel more complete, professional, local, SEO-friendly, mobile-friendly, and aligned with Sol Customs as an automotive customization business serving Ruskin and the Tampa Bay area.
+
+Required updates:
+
+1. Make all important business content visible as crawlable text
+Do not rely only on JavaScript-rendered visual cards for key information. Make sure the page includes real readable HTML text for:
+- Sol Customs
+- Vehicle wraps
+- Colored PPF
+- Commercial wraps
+- Custom lighting
+- Engravings
+- Aero installs
+- Aftermarket parts
+- Serving Ruskin and the Tampa Bay area
+- Email: inquire@solcustoms.com
+- Phone: 770-0377-9390
+- Hours: Everyday 10:00 AM - 8:00 PM
+
+2. Improve the navigation
+Update the top navigation to include:
+- Home
+- About
+- Services
+- Gallery
+- Contact
+
+Do NOT include “Get a Free Quote” in the navigation for now.
+
+Make sure:
+- All nav links scroll smoothly to the correct section
+- The active sections are properly linked with IDs
+- The mobile hamburger menu works correctly
+- The menu closes after a user taps a link on mobile
+- The header stays clean and professional
+
+3. Improve the hero section
+The hero should clearly explain what Sol Customs does within the first few seconds.
+
+Suggested headline:
+“Custom Vehicle Wraps & Auto Styling in Tampa Bay”
+
+Suggested subheadline:
+“Sol Customs helps drivers and businesses stand out with premium vehicle wraps, colored PPF, commercial wraps, custom lighting, engravings, aero installs, and aftermarket upgrades.”
+
+Add strong CTA buttons:
+- Call Now
+- Text Us
+- Email Sol Customs
+
+Do not add a quote form yet.
+
+4. Improve local SEO copy naturally
+Add local SEO phrases in a natural way throughout the page, especially in the hero, about, services, and contact sections.
+
+Use phrases like:
+- vehicle wraps in Ruskin FL
+- car wraps Tampa Bay
+- colored PPF Tampa Bay
+- custom auto styling Tampa Bay
+- commercial vehicle wraps
+- automotive customization in Ruskin
+- aftermarket auto parts installation
+- custom car lighting
+
+Avoid keyword stuffing. Make it sound human and professional.
+
+5. Improve the About section
+Rewrite the About section to sound trustworthy, local, and human.
+
+Mention:
+- Sol Customs serves Ruskin and the Tampa Bay area
+- The business focuses on custom automotive styling
+- Services include wraps, colored PPF, lighting, engravings, aero installs, commercial wraps, and aftermarket upgrades
+- The goal is to help personal vehicles and business fleets look unique, clean, and professional
+
+6. Improve the Services section
+Create or improve service cards for:
+- Vehicle Wraps
+- Colored PPF
+- Commercial Wraps
+- Custom Lighting
+- Engravings
+- Aero Installs
+- Aftermarket Parts
+
+Each service card should include a short benefit-focused description. Keep the copy clear and sales-focused.
+
+7. Improve the Gallery section
+Make the Gallery section look polished even if there are only placeholder images.
+
+Requirements:
+- Responsive grid layout
+- Clean hover effect
+- Lazy-load images where possible
+- Add alt text for each image
+- Keep the design premium and automotive-focused
+
+If there are no real project images available, use tasteful placeholders and label them clearly so they can be replaced later.
+
+8. Improve the Contact section
+Add a clean contact section with:
+- Email: inquire@solcustoms.com
+- Phone: 770-0377-9390
+- Hours: Everyday 10:00 AM - 8:00 PM
+- Service area: Ruskin and Tampa Bay area
+
+Add buttons:
+- Call Now using tel:
+- Text Us using sms:
+- Email Us using mailto:
+
+It is okay for buttons to open phone, SMS, or email apps in this section. The only thing we are ignoring for now is the quote form and automated lead capture.
+
+9. Improve typography and brand feel
+Use the actual Sol Customs logo image if available.
+
+For style:
+- Keep the design modern, dark, premium, and automotive-focused
+- Use a graffiti/street-style font only for accents or large headings if it matches the logo
+- Use a clean readable font like Montserrat, Poppins, or Inter for body text
+- Do not make the whole website hard to read with graffiti fonts
+- The site should feel custom, bold, and professional, not childish or cluttered
+
+10. Improve technical SEO
+Add or verify:
+- Proper page title
+- Meta description
+- One clear H1
+- Correct heading hierarchy
+- Alt text on images
+- Semantic sections
+- Descriptive button labels
+- Local business-focused content
+- Clean HTML structure
+
+Suggested title:
+“Sol Customs | Vehicle Wraps, Colored PPF & Auto Styling in Tampa Bay”
+
+Suggested meta description:
+“Sol Customs provides vehicle wraps, colored PPF, commercial wraps, custom lighting, engravings, aero installs, and aftermarket auto styling services in Ruskin and the Tampa Bay area.”
+
+11. Improve mobile responsiveness
+Test and fix:
+- Hero layout on mobile
+- Navigation menu
+- Button spacing
+- Service cards
+- Gallery grid
+- Contact section
+- Text readability
+- No horizontal scrolling
+- Good spacing on small screens
+
+12. Preserve existing working features
+Do not break the current layout, styling, routing, or deployment setup.
+Do not add backend code for quote forms.
+Do not add Netlify Forms.
+Do not add Resend or email API yet.
+Do not create a quote form.
+
+Final goal:
+After this update, the site should look like a polished one-page local business website for Sol Customs, clearly explain the services, rank better for local Tampa Bay/Ruskin search terms, and make it easy for customers to call, text, or email the business.

@@ -14,7 +14,7 @@ import gallery7 from "@assets/705967333_973125332195081_1389349046506016320_n_17
 import gallery8 from "@assets/706873775_896180256846272_203189804566728745_n_1779909513209.jpg";
 import gallery9 from "@assets/707397044_27406256158958011_5476898148741391745_n_1779909513209.jpg";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin, Paintbrush, Shield, Truck, Lightbulb, Gem, Star, Sparkles, Wind, Wrench, Instagram } from "lucide-react";
+import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin, Paintbrush, Shield, Truck, Gem, Sparkles, Wind, Wrench, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Navbar() {
@@ -66,12 +66,6 @@ function Navbar() {
                 {link.name}
               </button>
             ))}
-            <Button
-              onClick={() => scrollTo("quote")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(179,30,60,0.4)] transition-all"
-            >
-              Free Quote
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,12 +98,6 @@ function Navbar() {
                   {link.name}
                 </button>
               ))}
-              <Button
-                onClick={() => scrollTo("quote")}
-                className="w-full bg-primary text-primary-foreground mt-4"
-              >
-                Get a Free Quote
-              </Button>
             </div>
           </motion.div>
         )}
@@ -119,20 +107,13 @@ function Navbar() {
 }
 
 function Hero() {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
         <img
           src={heroImg}
-          alt="Luxury automotive customization"
+          alt="Custom vehicle wrap by Sol Customs — automotive styling in Ruskin and Tampa Bay"
           className="w-full h-full object-cover object-center"
         />
       </div>
@@ -145,27 +126,41 @@ function Hero() {
           className="max-w-4xl"
         >
           <div className="w-16 h-[2px] bg-primary mb-8 mx-auto md:mx-0" />
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-tight">
-            Luxury Automotive <br /> Customization, <br /> Built to <span className="text-primary italic">Stand Out</span>.
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+            Custom Vehicle Wraps & <span className="text-primary italic">Auto Styling</span> in Tampa Bay
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            Sol Customs designs and installs premium vehicle wraps, colored PPF, custom lighting, engravings, aero parts, and aftermarket upgrades for private and commercial vehicles across Ruskin and the Tampa Bay area.
+            Sol Customs helps drivers and businesses stand out with premium vehicle wraps, colored PPF, commercial wraps, custom lighting, engravings, aero installs, and aftermarket upgrades.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             <Button
               size="lg"
-              onClick={() => scrollTo("quote")}
+              asChild
               className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(179,30,60,0.5)] transition-all"
             >
-              Get a Free Quote
+              <a href="tel:770-0377-9390" aria-label="Call Sol Customs">
+                <Phone size={20} className="mr-2" /> Call Now
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollTo("services")}
+              asChild
               className="w-full sm:w-auto text-lg px-8 py-6 border-border hover:bg-white/5 hover:text-primary transition-colors"
             >
-              View Services
+              <a href="sms:770-0377-9390" aria-label="Text Sol Customs">
+                <Mail size={20} className="mr-2" /> Text Us
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="w-full sm:w-auto text-lg px-8 py-6 border-border hover:bg-white/5 hover:text-primary transition-colors"
+            >
+              <a href="mailto:inquire@solcustoms.com" aria-label="Email Sol Customs">
+                <Mail size={20} className="mr-2" /> Email Sol Customs
+              </a>
             </Button>
           </div>
         </motion.div>
@@ -191,16 +186,16 @@ function About() {
             </h2>
             <div className="space-y-8 text-xl md:text-3xl font-light leading-relaxed text-foreground/90">
               <p>
-                Sol Customs is a premium automotive customization brand serving Ruskin and the Tampa Bay area.
+                Sol Customs is a custom auto styling shop serving Ruskin and the Tampa Bay area, focused on premium vehicle wraps, colored PPF, custom lighting, engravings, aero installs, and aftermarket upgrades for personal vehicles and business fleets.
               </p>
               <p className="text-muted-foreground">
-                From color-changing wraps and colored PPF to lighting upgrades, engravings, aero installs, and aftermarket parts, every project is designed to give vehicles a bold, clean, and unforgettable finish.
+                Whether you're looking for vehicle wraps in Ruskin FL, commercial vehicle wraps for your fleet, or custom car lighting that makes your build feel one of a kind, every project gets the same attention to detail and finish quality.
               </p>
               <p>
                 Every build receives hands-on attention from start to finish, with a custom approach that ensures no two projects look the same.
               </p>
               <p className="text-muted-foreground">
-                Whether it is a private vehicle, commercial wrap, fleet upgrade, or personal showpiece, Sol Customs focuses on precision, style, and detail from every angle.
+                From private daily drivers to commercial wraps and personal showpieces, Sol Customs delivers automotive customization in Ruskin that looks clean, bold, and professional.
               </p>
               <p className="font-medium text-white italic pt-4">
                 This is more than customization. This is identity on wheels.
@@ -214,15 +209,13 @@ function About() {
 }
 
 const servicesList = [
-  { title: "Vehicle Wraps", desc: "Custom full and partial wraps designed to transform cars, trucks, vans, and specialty vehicles.", icon: Paintbrush },
-  { title: "Colored PPF", desc: "Colored paint protection film that gives vehicles a premium finish while helping protect the paint.", icon: Shield },
-  { title: "Commercial Wraps", desc: "Professional wraps for business vehicles, work trucks, vans, fleets, and mobile branding.", icon: Truck },
-  { title: "Tail Light Engravings", desc: "Custom tail light engraving for a unique, detailed, and personalized finish.", icon: Lightbulb },
-  { title: "Glass Engravings", desc: "Custom glass engraving for automotive windows, panels, or specialty details.", icon: Gem },
-  { title: "Star Lights", desc: "Luxury star light headliner installs that create a premium interior atmosphere.", icon: Star },
-  { title: "Ambient Lighting", desc: "Custom interior ambient lighting for a modern, high-end driving experience.", icon: Sparkles },
-  { title: "Aero Install", desc: "Installation of front lips, splitters, diffusers, spoilers, side skirts, and aero upgrades.", icon: Wind },
-  { title: "Aftermarket Part Install", desc: "Installation of select aftermarket parts to enhance the look and personality of the vehicle.", icon: Wrench },
+  { title: "Vehicle Wraps", desc: "Custom car wraps in Tampa Bay for daily drivers, weekend builds, and specialty vehicles — full and partial wraps in any color or finish.", icon: Paintbrush },
+  { title: "Colored PPF", desc: "Colored paint protection film that gives your vehicle a premium finish while protecting the factory paint from rock chips and wear.", icon: Shield },
+  { title: "Commercial Wraps", desc: "Commercial vehicle wraps for work trucks, vans, and fleets — turn your vehicles into rolling billboards for your business.", icon: Truck },
+  { title: "Custom Lighting", desc: "Custom car lighting including star light headliners, ambient interior lighting, and accent installs for a high-end driving experience.", icon: Sparkles },
+  { title: "Engravings", desc: "Detailed tail light and glass engravings that give your build a unique, personalized finish you won't see anywhere else.", icon: Gem },
+  { title: "Aero Installs", desc: "Installation of front lips, splitters, diffusers, spoilers, side skirts, and other aero upgrades for an aggressive, dialed-in look.", icon: Wind },
+  { title: "Aftermarket Parts", desc: "Aftermarket auto parts installation to enhance the look, performance, and personality of your vehicle.", icon: Wrench },
 ];
 
 function Services() {
@@ -459,12 +452,9 @@ function Contact() {
               </div>
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-muted-foreground mb-4">inquire@solcustoms.com</p>
-              <div className="flex gap-4 mt-auto w-full flex-col sm:flex-row">
-                <Button variant="outline" className="flex-1 border-border hover:bg-white/5" asChild>
+              <div className="flex gap-4 mt-auto w-full">
+                <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90" asChild>
                   <a href="mailto:inquire@solcustoms.com">Email Us</a>
-                </Button>
-                <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => scrollTo("quote")}>
-                  Online Quote
                 </Button>
               </div>
             </div>
