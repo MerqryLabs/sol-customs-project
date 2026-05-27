@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import { QuoteForm } from "@/components/QuoteForm";
 import heroImg from "@/assets/images/hero.png";
+import logoImg from "@assets/logo_transparent.png";
 import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
 import gallery2 from "@assets/703860614_982088887535500_431897983960216145_n_1779909513209.jpg";
 import gallery3 from "@assets/704055660_1668985524407045_7846469435312387687_n_1779909513209.jpg";
@@ -38,8 +39,17 @@ function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <button onClick={() => scrollTo("home")} className="text-2xl font-bold tracking-widest text-foreground hover:text-primary transition-colors">
-            SOL CUSTOMS
+          <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group overflow-visible">
+            <img
+              src={logoImg}
+              alt="Sol Customs"
+              className="h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              style={{ filter: "invert(1) drop-shadow(0 0 7px rgba(198,161,91,0.55))", marginTop: "-4px", marginBottom: "-4px" }}
+            />
+            <div className="flex flex-col items-start leading-none gap-[3px]">
+              <span className="text-[11px] tracking-[0.5em] text-primary/80 font-light uppercase">Premium Auto</span>
+              <span className="text-base tracking-[0.3em] text-foreground font-semibold uppercase group-hover:text-primary transition-colors">Sol Customs</span>
+            </div>
           </button>
 
           {/* Desktop Nav */}
