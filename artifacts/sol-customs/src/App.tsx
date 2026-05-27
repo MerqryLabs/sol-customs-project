@@ -197,7 +197,7 @@ function About() {
                 From color-changing wraps and colored PPF to lighting upgrades, engravings, aero installs, and aftermarket parts, every project is designed to give vehicles a bold, clean, and unforgettable finish.
               </p>
               <p>
-                The owner personally designs and installs vehicle wraps, giving each project a custom approach from concept to completion.
+                Every build receives hands-on attention from start to finish, with a custom approach that ensures no two projects look the same.
               </p>
               <p className="text-muted-foreground">
                 Whether it is a private vehicle, commercial wrap, fleet upgrade, or personal showpiece, Sol Customs focuses on precision, style, and detail from every angle.
