@@ -39,14 +39,20 @@ function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 overflow-hidden">
-          <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group">
+          <button onClick={() => scrollTo("home")} className="flex items-center gap-4 group">
             <img
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={{ height: "90px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
             />
-            <span className="text-base tracking-[0.35em] font-semibold uppercase bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Sol Customs</span>
+            <div className="flex items-center gap-4">
+              <div className="w-px h-10 bg-primary/40" />
+              <div className="flex flex-col leading-none">
+                <span className="text-[22px] font-black tracking-[0.25em] uppercase text-primary drop-shadow-[0_0_8px_rgba(198,161,91,0.5)] group-hover:drop-shadow-[0_0_14px_rgba(198,161,91,0.8)] transition-all duration-300">Sol Customs</span>
+                <span className="text-[9px] tracking-[0.55em] text-foreground/40 uppercase font-light mt-[3px]">Tampa Bay · Est. 2020</span>
+              </div>
+            </div>
           </button>
 
           {/* Desktop Nav */}
