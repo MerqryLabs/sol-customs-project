@@ -13,7 +13,7 @@ import gallery7 from "@assets/705967333_973125332195081_1389349046506016320_n_17
 import gallery8 from "@assets/706873775_896180256846272_203189804566728745_n_1779909513209.jpg";
 import gallery9 from "@assets/707397044_27406256158958011_5476898148741391745_n_1779909513209.jpg";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin } from "lucide-react";
+import { Menu, X, ChevronRight, Phone, Mail, Clock, MapPin, Paintbrush, Shield, Truck, Lightbulb, Gem, Star, Sparkles, Wind, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Navbar() {
@@ -211,15 +211,15 @@ function About() {
 }
 
 const servicesList = [
-  { title: "Vehicle Wraps", desc: "Custom full and partial wraps designed to transform cars, trucks, vans, and specialty vehicles." },
-  { title: "Colored PPF", desc: "Colored paint protection film that gives vehicles a premium finish while helping protect the paint." },
-  { title: "Commercial Wraps", desc: "Professional wraps for business vehicles, work trucks, vans, fleets, and mobile branding." },
-  { title: "Tail Light Engravings", desc: "Custom tail light engraving for a unique, detailed, and personalized finish." },
-  { title: "Glass Engravings", desc: "Custom glass engraving for automotive windows, panels, or specialty details." },
-  { title: "Star Lights", desc: "Luxury star light headliner installs that create a premium interior atmosphere." },
-  { title: "Ambient Lighting", desc: "Custom interior ambient lighting for a modern, high-end driving experience." },
-  { title: "Aero Install", desc: "Installation of front lips, splitters, diffusers, spoilers, side skirts, and aero upgrades." },
-  { title: "Aftermarket Part Install", desc: "Installation of select aftermarket parts to enhance the look and personality of the vehicle." },
+  { title: "Vehicle Wraps", desc: "Custom full and partial wraps designed to transform cars, trucks, vans, and specialty vehicles.", icon: Paintbrush },
+  { title: "Colored PPF", desc: "Colored paint protection film that gives vehicles a premium finish while helping protect the paint.", icon: Shield },
+  { title: "Commercial Wraps", desc: "Professional wraps for business vehicles, work trucks, vans, fleets, and mobile branding.", icon: Truck },
+  { title: "Tail Light Engravings", desc: "Custom tail light engraving for a unique, detailed, and personalized finish.", icon: Lightbulb },
+  { title: "Glass Engravings", desc: "Custom glass engraving for automotive windows, panels, or specialty details.", icon: Gem },
+  { title: "Star Lights", desc: "Luxury star light headliner installs that create a premium interior atmosphere.", icon: Star },
+  { title: "Ambient Lighting", desc: "Custom interior ambient lighting for a modern, high-end driving experience.", icon: Sparkles },
+  { title: "Aero Install", desc: "Installation of front lips, splitters, diffusers, spoilers, side skirts, and aero upgrades.", icon: Wind },
+  { title: "Aftermarket Part Install", desc: "Installation of select aftermarket parts to enhance the look and personality of the vehicle.", icon: Wrench },
 ];
 
 function Services() {
@@ -250,7 +250,7 @@ function Services() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-primary/50 transition-all duration-300">
-                  <span className="text-primary font-mono text-sm">0{i + 1}</span>
+                  <service.icon size={20} className="text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
