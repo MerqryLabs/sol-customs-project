@@ -167,16 +167,6 @@ function Hero() {
                 <Mail size={20} className="mr-2" /> Text Us
               </a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="w-full sm:w-auto text-lg px-8 py-6 border-border hover:bg-white/5 hover:text-primary transition-colors"
-            >
-              <a href="mailto:inquire@solcustoms.com" aria-label="Email Sol Customs">
-                <Mail size={20} className="mr-2" /> Email Sol Customs
-              </a>
-            </Button>
           </div>
         </motion.div>
       </div>
@@ -515,7 +505,7 @@ function Footer() {
   return (
     <footer className="bg-background py-12 border-t border-border">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-2xl font-bold tracking-[0.3em] text-foreground mb-4">SOL CUSTOMS</h2>
+        <h2 className="text-4xl text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] mb-4" style={{ fontFamily: "'Sedgwick Ave Display', cursive" }}>Sol Customs</h2>
         <p className="text-primary italic mb-6">Identity on wheels.</p>
         <a
           href="https://www.instagram.com/sol.customs/"
