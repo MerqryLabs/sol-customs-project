@@ -127,7 +127,7 @@ function Hero() {
         >
           <div className="w-16 h-[2px] bg-primary mb-8 mx-auto md:mx-0" />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            Custom Vehicle Wraps & <span className="text-primary italic">Auto Styling</span> in Tampa Bay
+            Sol Customs — Custom Vehicle Wraps & <span className="text-primary italic">Auto Styling</span> in Tampa Bay
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
             Sol Customs helps drivers and businesses stand out with premium vehicle wraps, colored PPF, commercial wraps, custom lighting, engravings, aero installs, and aftermarket upgrades.
@@ -180,19 +180,22 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-6 flex items-center gap-4">
+            <p className="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-6 flex items-center gap-4">
               <span className="w-8 h-[1px] bg-primary"></span>
               The Brand
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground tracking-tight">
+              About Sol Customs
             </h2>
             <div className="space-y-8 text-xl md:text-3xl font-light leading-relaxed text-foreground/90">
               <p>
-                Sol Customs is a custom auto styling shop serving Ruskin and the Tampa Bay area, focused on premium vehicle wraps, colored PPF, custom lighting, engravings, aero installs, and aftermarket upgrades for personal vehicles and business fleets.
+                Sol Customs is a custom auto styling shop serving Ruskin and the Tampa Bay area, focused on premium vehicle wraps, colored PPF, custom lighting, engravings, aero installs, and aftermarket parts for personal vehicles and business fleets.
               </p>
               <p className="text-muted-foreground">
-                Whether you're looking for vehicle wraps in Ruskin FL, commercial vehicle wraps for your fleet, or custom car lighting that makes your build feel one of a kind, every project gets the same attention to detail and finish quality.
+                Whether you're looking for vehicle wraps in Ruskin FL, car wraps Tampa Bay drivers can trust, colored PPF Tampa Bay finishes, or commercial vehicle wraps for your fleet, every project gets the same attention to detail and finish quality.
               </p>
               <p>
-                Every build receives hands-on attention from start to finish, with a custom approach that ensures no two projects look the same.
+                From custom lighting and engravings to aero installs and aftermarket parts, every build receives hands-on attention from start to finish with a custom approach that ensures no two projects look the same.
               </p>
               <p className="text-muted-foreground">
                 From private daily drivers to commercial wraps and personal showpieces, Sol Customs delivers automotive customization in Ruskin that looks clean, bold, and professional.
@@ -287,7 +290,7 @@ function Gallery() {
           className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">The Gallery</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Gallery</h2>
             <div className="w-24 h-[2px] bg-primary" />
           </div>
           <p className="text-muted-foreground max-w-md">
@@ -428,7 +431,14 @@ function Contact() {
         >
           <h2 className="text-4xl font-bold mb-6 text-foreground">Contact Us</h2>
           <div className="w-16 h-[2px] bg-primary mx-auto mb-12" />
-          
+
+          <address className="not-italic text-muted-foreground text-lg leading-relaxed mb-12 space-y-2">
+            <p><span className="text-foreground font-medium">Email:</span> <a href="mailto:inquire@solcustoms.com" className="hover:text-primary transition-colors">inquire@solcustoms.com</a></p>
+            <p><span className="text-foreground font-medium">Phone:</span> <a href="tel:770-0377-9390" className="hover:text-primary transition-colors">770-0377-9390</a></p>
+            <p><span className="text-foreground font-medium">Hours:</span> Everyday 10:00 AM - 8:00 PM</p>
+            <p>Serving Ruskin and the Tampa Bay area</p>
+          </address>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="p-8 bg-background border border-border rounded-xl flex flex-col items-center text-center">
               <div className="w-12 h-12 bg-card rounded-full flex items-center justify-center mb-4 text-primary border border-border">
@@ -463,7 +473,7 @@ function Contact() {
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-muted-foreground mb-10">
             <div className="flex items-center gap-3 justify-center">
               <Clock className="text-primary" size={20} />
-              <span>Everyday, 10:00 AM - 8:00 PM</span>
+              <span>Hours: Everyday 10:00 AM - 8:00 PM</span>
             </div>
             <div className="flex items-center gap-3 justify-center">
               <MapPin className="text-primary" size={20} />
