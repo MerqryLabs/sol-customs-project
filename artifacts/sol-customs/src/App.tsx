@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { QuoteForm } from "@/components/QuoteForm";
 import heroImg from "@assets/hero_generated.png";
 import logoImg from "@assets/logo_transparent.png";
-import wheelImg from "@assets/wheel_1779913505278.jpg";
+import detailImg from "@assets/detail_generated.png";
 import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
 import gallery2 from "@assets/703860614_982088887535500_431897983960216145_n_1779909513209.jpg";
 import gallery3 from "@assets/704055660_1668985524407045_7846469435312387687_n_1779909513209.jpg";
@@ -400,7 +400,7 @@ function WhyChooseUs() {
             className="relative"
           >
             <div className="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden relative border border-border">
-              <img src={wheelImg} alt="Premium wrap details" className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" />
+              <img src={detailImg} alt="Premium wrap details" className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
             </div>
             {/* Decorative element */}

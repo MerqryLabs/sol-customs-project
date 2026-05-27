@@ -66,3 +66,9 @@ id = "EaUDXxfS3wQNzc7aUlia8"
 uri = "file://attached_assets/hero_generated.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "TTmaHkIoU5cAAD6yR5EoJ"
+uri = "file://attached_assets/detail_generated.png"
+type = "image"
+title = "generated_image"
