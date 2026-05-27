@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { QuoteForm } from "@/components/QuoteForm";
-import heroImg from "@/assets/images/hero.png";
+import heroImg from "@assets/706873775_896180256846272_203189804566728745_n_1779909513209.jpg";
 import logoImg from "@assets/logo_transparent.png";
 import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
 import gallery2 from "@assets/703860614_982088887535500_431897983960216145_n_1779909513209.jpg";
