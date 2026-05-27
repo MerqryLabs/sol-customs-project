@@ -44,7 +44,7 @@ function Navbar() {
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ height: "72px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
+              style={{ height: "80px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
             />
             <div className="flex flex-col items-start leading-none gap-[3px]">
               <span className="text-[11px] tracking-[0.5em] text-primary/80 font-light uppercase">Premium Auto</span>
