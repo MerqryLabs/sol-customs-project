@@ -46,10 +46,7 @@ function Navbar() {
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={{ height: "90px", filter: "invert(1) drop-shadow(0 0 10px rgba(198,161,91,0.65))" }}
             />
-            <div className="flex flex-col items-start leading-none gap-[3px]">
-              <span className="text-[11px] tracking-[0.5em] text-primary/80 font-light uppercase">Premium Auto</span>
-              <span className="text-base tracking-[0.3em] text-foreground font-semibold uppercase group-hover:text-primary transition-colors">Sol Customs</span>
-            </div>
+            <span className="text-base tracking-[0.35em] font-semibold uppercase bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Sol Customs</span>
           </button>
 
           {/* Desktop Nav */}
