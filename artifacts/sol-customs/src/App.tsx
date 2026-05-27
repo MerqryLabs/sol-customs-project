@@ -36,15 +36,15 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300 overflow-visible">
+      <div className="container mx-auto px-6 overflow-visible">
+        <div className="flex items-center justify-between h-20 overflow-visible">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group overflow-visible">
             <img
               src={logoImg}
               alt="Sol Customs"
-              className="h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ filter: "invert(1) drop-shadow(0 0 7px rgba(198,161,91,0.55))", marginTop: "-4px", marginBottom: "-4px" }}
+              className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              style={{ height: "220px", filter: "invert(1) drop-shadow(0 0 16px rgba(198,161,91,0.75))", marginTop: "-70px", marginBottom: "-70px" }}
             />
             <div className="flex flex-col items-start leading-none gap-[3px]">
               <span className="text-[11px] tracking-[0.5em] text-primary/80 font-light uppercase">Premium Auto</span>
