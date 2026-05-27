@@ -36,6 +36,7 @@ function Navbar() {
     { name: "Services", id: "services" },
     { name: "Gallery", id: "gallery" },
     { name: "Contact", id: "contact" },
+    { name: "Get Quote", id: "quote" },
   ];
 
   return (
@@ -107,6 +108,13 @@ function Navbar() {
 }
 
 function Hero() {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -132,7 +140,14 @@ function Hero() {
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
             Sol Customs helps drivers and businesses stand out with premium vehicle wraps, colored PPF, commercial wraps, custom lighting, engravings, aero installs, and aftermarket upgrades.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 justify-center md:justify-start">
+            <Button
+              size="lg"
+              onClick={() => scrollTo("quote")}
+              className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(179,30,60,0.5)] transition-all"
+            >
+              <Sparkles size={20} className="mr-2" /> Get a Free Quote
+            </Button>
             <Button
               size="lg"
               asChild
