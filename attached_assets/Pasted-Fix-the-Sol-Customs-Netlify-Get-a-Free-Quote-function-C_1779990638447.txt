@@ -1,0 +1,59 @@
+Fix the Sol Customs Netlify “Get a Free Quote” function.
+
+Current production issue:
+The deployed site sends a POST request to:
+
+/.netlify/functions/quote
+
+Netlify returns:
+
+502 Bad Gateway
+
+Netlify Observability shows the request reaches the function endpoint, but the response is only 396 bytes and appears to come from Netlify, not from our function code. This suggests the function is crashing before our try/catch can return a JSON response.
+
+Likely cause:
+The quote function is a bare TypeScript Netlify function, but the package may not have @netlify/functions installed and/or the handler export/signature may not be bundled correctly.
+
+Please do the following inside artifacts/sol-customs:
+
+1. Install @netlify/functions in the artifacts/sol-customs package.
+2. Update the quote function to use the proper Netlify TypeScript handler format:
+
+import type { Handler } from "@netlify/functions";
+
+export const handler: Handler = async (event) => {
+// code here
+};
+
+3. Make sure the function file is located where Netlify expects it based on this project’s netlify.toml and base directory.
+4. Confirm the function is named quote and deploys to:
+
+/.netlify/functions/quote
+
+5. Add console.log at the start of the handler so we can confirm the function is being invoked.
+
+6. Add console.error logs around all failure points, especially:
+
+   * JSON parsing
+   * missing environment variables
+   * Web3Forms request failure
+   * unexpected runtime errors
+
+7. Make sure the function never crashes silently. It should always return a valid Netlify response object:
+
+{
+statusCode,
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify(...)
+}
+
+8. Keep POST as the only accepted method and return 405 JSON for other methods.
+9. Validate required fields: name, email, phone, and service/message.
+10. Use WEB3FORMS_ACCESS_KEY from Netlify environment variables. Do not expose the key in frontend code.
+11. Send quote submissions to [inquire@solcustoms.com](mailto:inquire@solcustoms.com).
+12. Confirm the frontend fetch still points to:
+
+/.netlify/functions/quote
+
+13. Verify the build works locally and that the Netlify function bundles successfully.
+14. At the end, tell me exactly which environment variables I need to add in Netlify and whether they need Functions scope enabled.
