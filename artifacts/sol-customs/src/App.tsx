@@ -55,7 +55,7 @@ function Navbar() {
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
-              <span className="whitespace-nowrap text-[22px] lg:text-[36px] text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] group-hover:drop-shadow-[0_0_14px_rgba(179,30,60,0.9)] transition-all duration-300" style={{ fontFamily: "'Sedgwick Ave Display', cursive" }}>Sol Customs</span>
+              <span className="whitespace-nowrap text-[22px] lg:text-[36px] text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] group-hover:drop-shadow-[0_0_14px_rgba(179,30,60,0.9)] transition-all duration-300" style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.06em" }}>Sol Customs</span>
             </div>
           </button>
 
@@ -508,7 +508,7 @@ function Footer() {
   return (
     <footer className="bg-background py-12 border-t border-border">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] mb-4" style={{ fontFamily: "'Sedgwick Ave Display', cursive" }}>Sol Customs</h2>
+        <h2 className="text-4xl text-primary drop-shadow-[0_0_8px_rgba(179,30,60,0.6)] mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.06em" }}>Sol Customs</h2>
         <p className="text-primary italic mb-6">Identity on wheels.</p>
         <a
           href="https://www.instagram.com/sol.customs/"
