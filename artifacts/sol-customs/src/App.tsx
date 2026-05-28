@@ -156,7 +156,7 @@ function Hero() {
               asChild
               className="w-full sm:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(179,30,60,0.5)] transition-all"
             >
-              <a href="tel:770-0377-9390" aria-label="Call Sol Customs">
+              <a href="tel:770-377-9390" aria-label="Call Sol Customs">
                 <Phone size={20} className="mr-2" /> Call Now
               </a>
             </Button>
@@ -166,7 +166,7 @@ function Hero() {
               asChild
               className="w-full sm:w-auto text-lg px-8 py-6 border-border hover:bg-white/5 hover:text-primary transition-colors"
             >
-              <a href="sms:770-0377-9390" aria-label="Text Sol Customs">
+              <a href="sms:770-377-9390" aria-label="Text Sol Customs">
                 <Mail size={20} className="mr-2" /> Text Us
               </a>
             </Button>
@@ -442,7 +442,7 @@ function Contact() {
 
           <address className="not-italic text-muted-foreground text-lg leading-relaxed mb-12 space-y-2">
             <p><span className="text-foreground font-medium">Email:</span> <a href="mailto:inquire@solcustoms.com" className="hover:text-primary transition-colors">inquire@solcustoms.com</a></p>
-            <p><span className="text-foreground font-medium">Phone:</span> <a href="tel:770-0377-9390" className="hover:text-primary transition-colors">770-0377-9390</a></p>
+            <p><span className="text-foreground font-medium">Phone:</span> <a href="tel:770-377-9390" className="hover:text-primary transition-colors">770-377-9390</a></p>
             <p><span className="text-foreground font-medium">Hours:</span> Everyday 10:00 AM - 8:00 PM</p>
             <p>Serving Ruskin and the Tampa Bay area</p>
           </address>
@@ -453,13 +453,13 @@ function Contact() {
                 <Phone size={24} />
               </div>
               <h3 className="text-xl font-bold mb-2">Call or Text</h3>
-              <p className="text-muted-foreground mb-4">770-0377-9390</p>
+              <p className="text-muted-foreground mb-4">770-377-9390</p>
               <div className="flex gap-4 mt-auto">
                 <Button variant="outline" className="border-border hover:bg-white/5" asChild>
-                  <a href="tel:770-0377-9390">Call Now</a>
+                  <a href="tel:770-377-9390">Call Now</a>
                 </Button>
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-                  <a href="sms:770-0377-9390">Text Us</a>
+                  <a href="sms:770-377-9390">Text Us</a>
                 </Button>
               </div>
             </div>
