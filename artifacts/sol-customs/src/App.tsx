@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Link } from "wouter";
-import { QuoteForm } from "@/components/QuoteForm";
+
+const QuoteForm = React.lazy(() =>
+  import("@/components/QuoteForm").then((m) => ({ default: m.QuoteForm })),
+);
 import heroImg from "@assets/bybridge_1779917585846.jpg";
 import logoImg from "@assets/logo_transparent.png";
 import detailImg from "@assets/detail_generated.png";
@@ -534,7 +537,9 @@ export default function App() {
         <Services />
         <Gallery />
         <WhyChooseUs />
-        <QuoteForm />
+        <Suspense fallback={<div id="quote" className="py-24" />}>
+          <QuoteForm />
+        </Suspense>
         <Contact />
       </main>
       <Footer />
