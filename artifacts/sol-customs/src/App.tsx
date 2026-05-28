@@ -43,7 +43,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 overflow-hidden">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-4 group">
@@ -51,7 +51,7 @@ function Navbar() {
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ height: "90px", filter: "invert(1) drop-shadow(0 0 6px rgba(255,255,255,0.2))" }}
+              style={{ height: "90px", filter: "invert(1)" }}
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
