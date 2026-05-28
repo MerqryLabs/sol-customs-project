@@ -6,7 +6,7 @@ const QuoteForm = React.lazy(() =>
 );
 import heroImg from "@assets/4cARS_1779927255939.jpg";
 import logoImg from "@assets/logo_transparent.png";
-import detailImg from "@assets/detail_generated.png";
+import detailImg from "@assets/Workingtech_1779929239045.jpg";
 import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
 import gallery2 from "@assets/703860614_982088887535500_431897983960216145_n_1779909513209.jpg";
 import gallery3 from "@assets/704055660_1668985524407045_7846469435312387687_n_1779909513209.jpg";
