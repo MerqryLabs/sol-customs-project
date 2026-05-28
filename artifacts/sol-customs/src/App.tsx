@@ -406,7 +406,7 @@ function WhyChooseUs() {
             className="relative"
           >
             <div className="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden relative border border-border">
-              <img src={detailImg} alt="Premium wrap details" className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700" />
+              <img src={detailImg} alt="Premium wrap details" className="w-full h-full object-cover transition-all duration-700" />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
             </div>
             {/* Decorative element */}
