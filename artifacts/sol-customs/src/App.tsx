@@ -125,7 +125,7 @@ function Hero() {
         <img
           src={heroImg}
           alt="Lineup of four custom-wrapped cars by Sol Customs — automotive styling in Ruskin and Tampa Bay"
-          className="w-full h-full object-contain object-center"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
