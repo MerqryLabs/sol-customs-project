@@ -7,10 +7,6 @@
   BASE_PATH = "/"
   NODE_VERSION = "20"
 
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"

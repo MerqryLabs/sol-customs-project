@@ -1,10 +1,10 @@
 // Sol Customs — Web3Forms-backed quote form.
 //
-// IMPORTANT: Before going live, replace WEB3FORMS_ACCESS_KEY below with the
-// real public access key from https://web3forms.com (free tier is fine).
-// The form posts directly from the browser to https://api.web3forms.com/submit
-// and Web3Forms emails the submission to the address configured in their
-// dashboard. There is no backend / serverless function involved.
+// Submits directly from the browser to https://api.web3forms.com/submit.
+// Web3Forms access keys are designed to be public/client-side — spam
+// protection is enforced by Web3Forms, not by hiding the key. Submissions
+// are emailed to the address configured in the Web3Forms dashboard
+// (inquire@solcustoms.com).
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -31,7 +31,8 @@ import {
 } from "@/components/ui/select";
 import { Loader2 } from "lucide-react";
 
-const QUOTE_ENDPOINT = "/.netlify/functions/quote";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_ACCESS_KEY = "18704890-27ed-490c-92f8-444d6e53899f";
 
 const SERVICE_OPTIONS = [
   "Vehicle Wrap",
@@ -99,15 +100,17 @@ export function QuoteForm() {
 
     setIsPending(true);
     try {
-      const res = await fetch(QUOTE_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          subject: "New Quote Request — Sol Customs",
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New Sol Customs Quote Request",
           from_name: "Sol Customs Website",
+          name: values.fullName,
           full_name: values.fullName,
           email: values.email,
           phone: values.phone,
