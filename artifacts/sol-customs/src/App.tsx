@@ -382,7 +382,6 @@ function WhyChooseUs() {
             
             <ul className="space-y-4">
               {[
-                "Owner-designed and installed projects",
                 "Premium automotive styling",
                 "Clean precise installation",
                 "Private and commercial vehicle services",
