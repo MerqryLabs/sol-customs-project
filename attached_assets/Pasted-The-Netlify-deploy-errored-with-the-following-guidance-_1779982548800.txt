@@ -1,0 +1,123 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis**
+
+- The build fails during Vite config loading because the config throws `Error: PORT environment variable is required but was not provided` ([line 101](#L101)-[line 113](#L113)).
+- This is a runtime check inside `artifacts/sol-customs/vite.config.ts` that exits when `process.env.PORT` is missing, which is the case in Netlify’s build environment.
+
+**Solution**
+
+1. In Netlify’s Site settings → Build & deploy → Environment, add a variable `PORT` with the value your app expects (e.g., `3000`).  
+   *If a different value is required, use that instead.*
+2. Alternatively (or additionally, to make local/CI builds resilient), update `artifacts/sol-customs/vite.config.ts` so it supplies a fallback when `PORT` isn’t defined, for example:
+
+   ```ts
+   const PORT = process.env.PORT ?? '3000';
+   ```
+
+   Use this `PORT` constant instead of accessing `process.env.PORT` directly.
+
+Either change will allow the Vite config to load and the build to proceed.
+
+The relevant error logs are:
+
+Line 0: build-image version: ac6eb13fbf000e5c09ad677efd8b7c3c2d0142b6 (noble-new-builds)
+Line 1: buildbot version: 397ebb8f8f4ca79bf05dcf5da3f37ebb58e6f89f
+Line 2: Fetching cached dependencies
+Line 3: Failed to fetch cache, continuing with build
+Line 4: Starting to prepare the repo for build
+Line 5: No cached dependencies found. Cloning fresh repo
+Line 6: git clone --filter=blob:none https://github.com/MerqryLabs/sol-customs-project
+Line 7: Preparing Git Reference refs/heads/main
+Line 8: Custom build path detected. Proceeding with the specified path: 'artifacts/sol-customs'
+Line 9: Custom publish path detected. Proceeding with the specified path: 'artifacts/sol-customs/dist/public'
+Line 10: Custom functions path detected. Proceeding with the specified path: 'artifacts/sol-customs/netlify/functions'
+Line 11: Installing dependencies
+Line 12: mise ~/.config/mise/config.toml tools: python@3.14.3
+Line 13: mise ~/.config/mise/config.toml tools: ruby@3.4.8
+Line 25: .../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+Line 26: .../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+Line 27: devDependencies:
+Line 28: + @hookform/resolvers 3.10.0
+Line 29: + @radix-ui/react-label 2.1.8
+Line 30: + @radix-ui/react-select 2.2.6
+Line 31: + @radix-ui/react-slot 1.2.4
+Line 32: + @radix-ui/react-toast 1.2.15
+Line 33: + @replit/vite-plugin-cartographer 0.5.5
+Line 34: + @replit/vite-plugin-dev-banner 0.1.2
+Line 35: + @replit/vite-plugin-runtime-error-modal 0.0.6
+Line 36: + @tailwindcss/typography 0.5.19
+Line 37: + @tailwindcss/vite 4.3.0
+Line 38: + @tanstack/react-query 5.100.9
+Line 39: + @types/node 25.6.2
+Line 40: + @types/react 19.2.14
+Line 41: + @types/react-dom 19.2.3
+Line 42: + @vitejs/plugin-react 5.2.0
+Line 43: + class-variance-authority 0.7.1
+Line 44: + clsx 2.1.1
+Line 45: + framer-motion 12.38.0
+Line 85: ❯ Context
+Line 86:   production
+Line 87: ​
+Line 88: build.command from netlify.toml                               
+Line 89: ────────────────────────────────────────────────────────────────
+Line 90: ​
+Line 91: $ cd ../.. && pnpm install --frozen-lockfile=false && pnpm --filter @workspace/sol-customs run build
+Line 92: Scope: all 4 workspace projects
+Line 93: Lockfile is up to date, resolution step is skipped
+Line 94: Already up to date
+Line 95: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 96: . preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo 
+Line 97: . preinstall: Done
+Line 98: Done in 880ms using pnpm v10.30.3
+Line 99: > @workspace/sol-customs@0.0.0 build /opt/build/repo/artifacts/sol-customs
+Line 100: > vite build --config vite.config.ts
+Line 101: failed to load config from /opt/build/repo/artifacts/sol-customs/vite.config.ts
+Line 102: error during build:
+Line 103: Error: PORT environment variable is required but was not provided.
+Line 104:     at file:///opt/build/repo/artifacts/sol-customs/node_modules/.vite-temp/vite.config.ts.timestamp-1779982171563-66323c99c89e2
+Line 105:     at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+Line 106:     at async ModuleLoader.import (node:internal/modules/esm/loader:606:24)
+Line 107:     at async loadConfigFromBundledFile (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_light
+Line 108:     at async bundleAndLoadConfigFile (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightni
+Line 109:     at async loadConfigFromFile (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss
+Line 110:     at async resolveConfig (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32
+Line 111:     at async createBuilder (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32
+Line 112:     at async CAC.<anonymous> (file:///opt/build/repo/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.
+Line 113: /opt/build/repo/artifacts/sol-customs:
+Line 114:  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/sol-customs@0.0.0 build: `vite build --config vite.confi
+Line 115: Exit status 1
+Line 116: ​
+Line 117: "build.command" failed                                        
+Line 118: ────────────────────────────────────────────────────────────────
+Line 119: ​
+Line 120:   Error message
+Line 121:   Command failed with exit code 1: cd ../.. && pnpm install --frozen-lockfile=false && pnpm --filter @workspace/sol-customs run 
+Line 122: ​
+Line 123:   Error location
+Line 124:   In build.command from netlify.toml:
+Line 125:   cd ../.. && pnpm install --frozen-lockfile=false && pnpm --filter @workspace/sol-customs run build
+Line 126: ​
+Line 127:   Resolved config
+Line 128:   build:
+Line 129:     base: /opt/build/repo/artifacts/sol-customs
+Line 130:     command: cd ../.. && pnpm install --frozen-lockfile=false && pnpm --filter
+Line 131:       @workspace/sol-customs run build
+Line 132:     commandOrigin: config
+Line 133:     environment:
+Line 135:       - BASE_PATH
+Line 136:       - NODE_VERSION
+Line 137:     publish: /opt/build/repo/artifacts/sol-customs/dist/public
+Line 138:     publishOrigin: config
+Line 139:   functions:
+Line 140:     "*":
+Line 141:       node_bundler: esbuild
+Line 142:   functionsDirectory: /opt/build/repo/artifacts/sol-customs/netlify/functions
+Line 143:   redirects:
+Line 144:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+Line 145: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 146: Failing build: Failed to build site
+Line 147: Finished processing build request in 11.375s
