@@ -51,7 +51,7 @@ function Navbar() {
               src={logoImg}
               alt="Sol Customs"
               className="w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={{ height: "90px", filter: "invert(1) sepia(1) saturate(2) hue-rotate(300deg) drop-shadow(0 0 12px rgba(179,30,60,0.8))" }}
+              style={{ height: "90px", filter: "brightness(0) invert(1)" }}
             />
             <div className="flex items-center gap-4">
               <div className="w-px h-10 bg-primary/40" />
