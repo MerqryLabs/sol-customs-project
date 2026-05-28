@@ -31,8 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Loader2 } from "lucide-react";
 
-const WEB3FORMS_ACCESS_KEY = "18704890-27ed-490c-92f8-444d6e53899f";
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const QUOTE_ENDPOINT = "/.netlify/functions/quote";
 
 const SERVICE_OPTIONS = [
   "Vehicle Wrap",
@@ -100,14 +99,13 @@ export function QuoteForm() {
 
     setIsPending(true);
     try {
-      const res = await fetch(WEB3FORMS_ENDPOINT, {
+      const res = await fetch(QUOTE_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
           subject: "New Quote Request — Sol Customs",
           from_name: "Sol Customs Website",
           full_name: values.fullName,
