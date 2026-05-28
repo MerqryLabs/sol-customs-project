@@ -4,7 +4,7 @@ import { Link } from "wouter";
 const QuoteForm = React.lazy(() =>
   import("@/components/QuoteForm").then((m) => ({ default: m.QuoteForm })),
 );
-import heroImg from "@assets/bybridge_1779917585846.jpg";
+import heroImg from "@assets/4cARS_1779927255939.jpg";
 import logoImg from "@assets/logo_transparent.png";
 import detailImg from "@assets/detail_generated.png";
 import gallery1 from "@assets/703570652_2220955232006862_7364107803220806714_n_1779909513209.jpg";
@@ -124,7 +124,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
         <img
           src={heroImg}
-          alt="Custom vehicle wrap by Sol Customs — automotive styling in Ruskin and Tampa Bay"
+          alt="Lineup of four custom-wrapped cars by Sol Customs — automotive styling in Ruskin and Tampa Bay"
           className="w-full h-full object-cover object-center"
         />
       </div>
