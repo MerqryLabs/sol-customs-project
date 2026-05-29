@@ -323,11 +323,6 @@ function Gallery() {
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
-                <span className="px-4 py-2 border border-primary/50 text-primary font-medium tracking-wide rounded-md transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                  {img.label}
-                </span>
-              </div>
             </motion.div>
           ))}
         </div>
